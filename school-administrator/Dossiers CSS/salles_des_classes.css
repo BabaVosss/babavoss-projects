@@ -1,0 +1,282 @@
+/*classe, professeurs et ce qui est commun à toutes les autres pages */
+.liste{
+    height: 800px;
+    width: 300px;
+    background-color:rgba(255, 192, 203, 0.541);
+}
+
+#calendrier , .calendrier{
+    height: 900px;
+    width: 1000px;
+    margin-left: 30px;
+    
+}
+.content{
+    display: flex;
+    margin-left: 250px;
+    margin-top: 30px;
+    height: 900px;
+}
+body{
+    width: 1600px;
+    position: absolute;
+}
+hr{
+   margin-left:200px ; 
+}
+
+/*index.html*/
+.left{
+    width: 685px;
+    height: 644px;
+    background-color: black;
+}
+#form_index{
+    margin-left: 5px;
+    background-color: rgba(255, 192, 203, 0.541);
+    height: 800px;
+    width: 347px;
+    padding-right: 15px;
+}
+#form_index div{
+    margin-left: 46px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: 490px;
+}
+.heure_de_cour{
+    display: contents;
+}
+
+#form_index div input,textarea,button{
+    width: 250px;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    padding-left: 10px;
+    font-size: large;
+    color: black;
+}
+select{
+    width: 260px;
+    height: 48px;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    padding-left: 10px;
+    font-size: large;
+    color: black;
+}
+button:hover{
+    background-color: black;
+    color: white;
+
+}
+#form_index div input{
+    height: 42px;
+}
+.page{
+    
+    width: 1000px;
+    height: 900px;
+    
+}
+#modal_bg {
+    position: absolute;
+    height: 1300px;
+    top: 0px;
+    background-color: rgba(0.7,0.6,0.9,0.9);
+    width: 119%;
+    display: none;
+}
+#modal{    
+    width: 1329px;
+    height: 723px;
+    position: absolute;
+    top: 285px;
+    left: 270px;
+    background-color: rgba(237, 158, 121, 0.94);
+    
+}
+.modal_content{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 158px;
+     width: 1329px;
+    height: 728px;
+    left: 0px;
+    position: absolute;
+    top: -22px;
+}
+
+#exit {
+    height: 50px;
+    width: 50px;
+    right: -1246px;
+    position: relative;
+    background-color: #f0cab3;
+    top: 16px;
+    font-size: 42px;
+}
+.renseignement_box label{
+    font-size:35px;
+}
+.renseignement{
+display: flex;
+flex-direction: column;
+align-items: end;
+font-size: 32px;
+height: 500px;
+justify-content: space-around;
+}
+.renseignement input{
+    width: 182px;
+    height: 30px;
+    margin: 10px 10px 10px 0px;
+}
+
+#form_index div textarea{
+    height: 84px;
+    margin-top: 15px;
+}
+#form_index > textarea{
+    margin-left: 10px;
+    height: 95px;
+}
+button {
+    margin-left: 10px;
+    height: 60px;
+    background-color:rgb(131, 22, 140);
+    font-size: x-large;
+    color: white;
+
+}
+h5{
+    margin: 53.5px 0px 11px 0px;
+    height: 46px;
+    width: 349px;
+    font-size: 35px;
+    line-height: 1.35px;
+}
+
+/* Contacts */
+.div_class{
+    display: block;
+    margin-left: 200px;
+}
+
+h2{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top:2px;
+    margin-top: 1px;
+    height: 60px;
+    width:1100px;
+    color: white;
+    background-color: black;
+    background-position: center;
+
+}
+
+.map{
+    margin-top: 1px;
+    height:300px;
+    width: 1100px;
+    background-color: bisque;
+}
+
+.form_contact{
+    display: flex;
+    width: 900px;
+    height: 250px;
+
+}
+
+.input_form_contact,.text_form_contact>textarea{
+    margin-right: 4px;
+    width: 450px;
+}
+
+.input_form_contact input{
+    margin-right: 4px;
+    margin-bottom: 5px;
+    width: 348px;
+    height: 25px;
+}
+
+.text_form_contact textarea{
+    height: 185px;
+    width: 280px;
+}
+
+.text_form_contact>button{
+    width: 290px;
+    height: 40px;
+}
+
+
+
+
+.BDD{
+    margin-left: 300px;
+    display:flex;
+    flex-direction:row; 
+    height: 813px;
+    width: 1300px;
+    margin-top: 34px;
+    position: absolute;
+ }
+
+ .bouttons {
+    background-color:rgba(255, 192, 203, 0.541);
+ }
+ 
+ div[name="bouttons"] {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     width: 273px;
+ }
+ #champsConfig {
+     display: flex;
+     flex-direction:row;
+     border: 3px black solid;
+     width: 1000px;
+    margin-left: auto;
+    margin-right: auto
+ }
+ #donnees{
+     padding-top: 5px;
+    border: 3px black solid;
+    flex: 10;
+    flex: 5;
+    background-color: rgba(128,82,57,0.9);
+ }
+ .field{
+    flex: 2;
+    background-color: rgba(198,153,113,01);
+ }
+
+.beige{
+    background-color: rgba(198,153,113,01);
+}
+.marron{
+    background-color: rgba(128,82,57,0.9);
+}
+.liste_donnees {
+    padding-left: 0px;
+    text-decoration: underline;
+  
+}
+.liste_donnees ul{
+    height: 200px;
+    overflow-y: scroll;
+    padding: 0px;
+}
+.element_liste{
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.liste2 li{
+    margin: 20px auto;
+}
