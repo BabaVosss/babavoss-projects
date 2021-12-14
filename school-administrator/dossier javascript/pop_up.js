@@ -1,6 +1,6 @@
- 
-let btn = document.getElementById("new-data");
-let pop = document.getElementById('popup');
+const bouttons = document.getElementsByTagName("button");
+let btn = bouttons[0];
+let pop = document.getElementById('modal_bg');
 let close = document.getElementById('exit');
 
 btn.addEventListener("click",openModal);

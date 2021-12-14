@@ -11,7 +11,7 @@ $req = $bdd->query("SELECT nom_salle FROM salle");
 
 while ($donnees = $req->fetch()){
 
-   echo '<li class="list-group-item bg-info" >'. $donnees['nom_salle'].'</li> ';
+   echo '<li> <a href="#" class="element_liste_salle">' . $donnees['nom_salle'].'</a></li> ';
    
 }
 

@@ -1,0 +1,74 @@
+body{
+    text-align: center;
+}
+
+body > header {
+    display: flex;
+    height: 180px;
+    width: 1300px;
+    margin-left: 250px;
+}
+
+body > header > img {
+    margin-right: 30px;
+    height: 185px;
+    width: 265px;
+}
+body > header > h1 {
+    text-align: center;
+    border-bottom: 4px solid yellow;
+    font-family: Arial;
+    font-size: 99px;
+    width: 1300px;
+    margin-top: 0px;
+    padding-top: 26px;
+    margin-bottom: 37px;
+}
+/* Pour la balise nav et ses dérivés*/
+nav {
+    width: 1400px;
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    margin-left: 200px;
+    margin-right: 40px;
+    height: 40px;
+    background-color: rgba(245, 245, 245, 0.582);
+}
+nav > ul {
+
+    display: flex;
+
+}
+
+li {
+    text-align: center;
+}
+
+ul li {
+    list-style: none;
+    /* enleve les pointtillets */
+    margin: 0px 20px;
+    transition: 0.5s;
+
+}
+
+ul li a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: black;
+    font-weight: 100;
+    width: 167px;
+}
+
+#calendrier , .calendrier{
+   height: 700px;
+    width: 1000px;
+}
+.content{
+    width: 1500px;
+}

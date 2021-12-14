@@ -11,7 +11,7 @@ $req = $bdd->query("SELECT nom_classe FROM classe");
 
 while ($donnees = $req->fetch()){
 
-   echo '<li class="list-group-item bg-info">' . $donnees['nom_classe'].'</li> ';
+   echo '<li> <a href="#"  class="element_liste_classe">' . $donnees['nom_classe'].'</a></li> ';
    
 }
 

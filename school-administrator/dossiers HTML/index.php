@@ -2,181 +2,185 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="./../../fullcalendar-source/lib/main.css">
-    <link href="./../../bootstrap/bootstrap-5.1.3-dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="./../Dossiers CSS/index.css">
+    <link rel="stylesheet" href="./../Dossiers CSS/salles_des_classes.css">
+    <script src="./../dossier javascript/index.js"></script>
     
+    <link rel="stylesheet" href="./../fullcalendar-5.5.0/core/main.css">
+    <link rel="stylesheet" href="./../fullcalendar-5.5.0/daygrid/main.css">
+    <link rel="stylesheet" href="./../fullcalendar-5.5.0/timegrid/main.css">
+    <link rel="stylesheet" href="./../fullcalendar-5.5.0/list/main.css">
+  
+    <script src="./../fullcalendar-5.5.0/core/main.js"></script>
+    <script src="./../fullcalendar-5.5.0/daygrid/main.js"></script>
+    <script src="./../fullcalendar-5.5.0/list/main.js"></script>  
+    <script src="./../fullcalendar-5.5.0/timegrid/main.js"></script>
+    <script src="./../fullcalendar-5.5.0/interaction/main.js"></script>
     <title>Page d'accueil</title>
+  
+ 
+</head> 
 
-    <title>Authentification</title>
-</head>
-<body class="bg-dark ">
-     <!-- barre  de navigation -->
-    <div class="container-fluid">
-        <div class="row">
-                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-                    <a href="#" class="navbar-brand ">
-                        <img src="./../Images/school_administrator.png" height="111em"  alt="school_administrator">
-                        School-administrator
-                    </a>
-                </nav> 
-        </div>
-    </div>
+<body>
+    <hr>
+    <header>
+        <img src="./../Images/school_administrator.png" alt="school_administrator">
+        <h1>School-administrator</h1>
+    </header>
+    <hr>
 
-   
-    <!-- /form -->
-    <div class="container-fluid form mt-3 bg-info w-50 " > 
-       
-        <div class="row ">
-            
-            <!-- bouttons -->
-            <div class="row my-2 " style="margin-left:13% ;">
-                <button class="opt text-white col-4 mx-2 bg-dark active rounded "  style="height: 1.6cm;" > 
-                    <a href="#login " class="w-75" style="color: white;font-size:1.5em;">Se connecter</a>                     
-                </button>
-                <button class="opt col-4 mx-2 bg-dark"> 
-                    <a href="#signup" style="color: white;font-size:1.5em;">S'inscrire</a>
-                </button>
-
-            </div>
-               
-            <!-- option de connection  -->         
-            <div id="optCon" class="row ">
-                
-                <!-- sign up form --> 
-                <div id="signup" class="row my-3 #signup text-white" style="display: none;">
-                    <h3>Déjà inscrit : connectez vous!</h3>
-                    <form action="registre_utilisateur.php" method="post">
-                    
-                        
-                        <div class="form-group">
-                            <label>Nom </label>
-                            <input class="form-control" name="nom" type="text" required  />
-                        </div>
-                    
-                        <div class=" form-group">
-                            <label>Prénom</label>
-                            <input class="form-control" name="prenom" type="text" required >
-                        </div>
-                        
-
-                        <div class=" form-group">
-                            <label>Adresse mail*</label>
-                            <input class="form-control" name="mail" type="email" required />
-                        </div>
-                        
-                        <div class=" form-group">
-                            <label>Mot de passe*</label>
-                            <input class="form-control" name="pwd1" type="password" required />
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Confirmez votre mot de passe* </label>
-                            <input class="form-control" name="pwd2" type="password"required />
-                        </div>
-                    
-                        <button type="submit" class=" text-white btn bg-dark mt-2 ">Créer mon compte</button>
-                    
-                    </form>
-                </div>
-
-                <!-- login up form --> 
-                <div id="login" class="#login my-3" >   
-                <h3>Pas encore de compte? Inscrivez-vous gratuitement</h3>
-
-                    <?php 
-                        if(isset($_GET['err']) && $_GET['err']=='true'){
-                           echo '<div class="alert alert-danger" role="alert">
-                                Mail or Password INVALIDE !
-                            </div>';
-                        };
-                    ?>
-                    <form action="login.php" method="post">
-                    
-                        <div class="field-wrap">
-                            <label>
-                                Login<span class="req">*</span>
-                            </label>
-                            <input class="form-control" name="mail" type="text" required autocomplete="off"/>
-                        </div>
-                    
-                        <div class="field-wrap">
-                            <label>
-                                Mot de passe<span class="req">*</span>
-                            </label>
-                            <input class="form-control " name="pwd" type="password" required autocomplete="off"/>
-                        </div>
-                    
-                        <!--<p class="forgot"><a href="#">Forgot Password?</a></p>-->
-                        
-                        <button class=" btn bg-dark mt-2 text-light">Connexion</button>
-                        
-                    </form>
-
-                </div>
-                
-            </div>
-
-
-        </div>
-
-    </div>
-         <!-- caroussel -->
-    <div class="container bg-dark">
-         <div class="row my-5">
-             <h1 class="my-5 text-white"> Apercu </h1>
-            <div id="demo" class="carousel slide mt-5" data-ride="carousel" data-interval="3000">
-            
-            <div class="carousel-inner text-left">
-                <div class="carousel-item active">
-                    <img src="./../Images/exp1.png" class="w-100" alt="">
-                </div>
-
-                <div class="carousel-item text-center text-white">
-                    <h2>Administrer vos cours </h2>
-                    <p> Programmer des cours  <br>
-                        Reprogrammer par un simple click Deplacez <br>
-                        Faites plus facilement le bilan Utilisez les vues Mois ou Semaine
-                    </p>
-                </div>
-
-                <div class="carousel-item">
-                    <img src="./../Images/exp2.png.png" class=" w-100" alt="">
-                </div>
-
-                <div class="carousel-item text-center text-white">
-                    <h2>Administrer vos donnees </h2>
-                    <p>
-                        <ul>
-                            <li> Creez de nouvelles donnes </li>
-                            <li> Modifiez vos donnes donnes </li>
-                            <li> Visualisez les donnes donnes dre votre etablissement</li>
-                        </ul>                   
-                    </p>
-                </div>
-            <a class="carousel-control-prev text-dark" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span> Precedent
-            </a>
-            <a class="carousel-control-next text-dark" href="#demo" data-slide="next">
-                Suivant<span class="carousel-control-next-icon"></span> 
-            </a>
-            </div>
-        </div>
-    </div>   
-       
-        
-    <?php include('author.php')?>
-
+    <nav>
+            <ul>
+                <li><a href="./../dossiers HTML/index.php">Accueil</a></li>
+                <li><a href="./../dossiers HTML/classes.php">Classes</a></li>
+                <li><a href="./../dossiers HTML/professeurs.php">Proffesseurs</a></li>
+                <li><a href="./../dossiers HTML/salles_des_classes.php">Salles de classes</a></li>
+                <li><a href="./../dossiers HTML/base_de_données.php">Base de données</a></li>
+                <li><a href="#">Deconnexion</a></li>
+            </ul>
+    </nav>
     
-    <script src="./../../bootstrap/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-   <script src="./../dossier javascript/authentification.js"></script>
-   
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
+    <div class = "content">
+            <div id="calendrier">
+
+            </div>
+         
+            <form id="form_index" method="post" action="registre_cour.php">
+                <h5>Programmer un cours </h5>
+                <div>
+                    <input name="intitule" type="text" placeholder="nom du cours">
+
+                    <select class="classe" name="id_classe" id="heure" >
+                        <option value="null" selected> classe</option>
+                        <?php include('index_liste_classe.php'); ?>
+                    </select>
+                    
+                    <select name="id_prof" id="heure" >
+                        <option value="null" selected> professeur</option>
+                        <?php include('index_liste_professeur.php'); ?>
+                    </select> 
+                    
+                    <select name="id_salle" id="heure" >
+                        <option value="null" selected> salle de cour </option>
+                        <?php include('index_liste_salle.php'); ?>
+                    </select>
+
+                    <input type="date" name="date" id="">
+                    
+                    <label for="debut_cour" class="heure_de_cour">debut_cour<input type="time" name="debut_cour" id=""></label>
+                    <label for="fin_cour"  class="heure_de_cour" >fin_cour<input type="time" name="fin_cour" id=""></label>
+                    
+                     
+                </div>
+                    <textarea name="commentaire" placeholder="Commentaires"></textarea>
+                    <button type="submit">Enregistrer</button>
+            </form>
+    </div>
 </body>
+<footer style="margin : auto;">
+   <p>
+    Author : Mouhamadou Souleymane Diallo <br/>
+    Eleve ingenieur en deuxieme année à l'Institut Polytechnique de Saint Louis <br/>
+    Promo 8 . <br/>
+    Date : 2021
+   </p>
+</footer>
+
+
+
+<?php  // scripte permettant d'instantier le caledrirer _____________________________ ?>
+
+<?php //document.querySelector(".classe").addEventListener("change",function (){
+     //classe = "./cours_"+this.value+".php";
+    // alert(classe);
+                //});
+?>
+<script src="jquery-3.5.1.js"></script>
+<script>
+ let liste_cours = "./evenement_cour.php";
+ 
+               
+                // On va chercher la div dans le HTML
+                let element = document.getElementById('calendrier');
+
+                // On instancie le calendrier
+                let calendar = new FullCalendar.Calendar(element, {
+                    // On charge le composant "dayGrid"
+                    plugins: ['dayGrid', 'timeGrid' , 'list','interaction'],
+                    defaultView: 'timeGridWeek',
+                    locale: 'fr',
+                    editable: true,
+                    eventLimit: true,
+                    header: {
+                        left: 'timeGridWeek,list',
+                        center: 'title',
+                        right: 'prev,next'
+                    },
+                    buttonText: {
+                        week: 'vue semaine',
+                        list: 'vue liste'
+                    },
+
+
+                    //recuperation des evenements a partire d'un fichier php
+                    events: liste_cours,
+
+                    eventDrop:(infos)=>{
+
+                    // sy = strat year
+                        let sy = infos.event.start.getFullYear();
+                     // sm = start month 
+                        let sm = infos.event.start.getUTCMonth() +1; 
+                        let sd = infos.event.start.getDate(); 
+                        let sh = infos.event.start.getHours(); 
+                        let smn = infos.event.start.getMinutes();
+                        
+                     // ey = end year
+                        let ey = infos.event.end.getFullYear(); 
+                     // em = end month
+                        let em = infos.event.end.getUTCMonth() +1; 
+                        let ed = infos.event.end.getDate(); 
+                        let eh = infos.event.end.getHours(); 
+                        let emn = infos.event.end.getMinutes(); 
+
+                        let ID = infos.event.id;
+                        let START = sy+"-"+sm+"-"+sd+" "+sh+":"+smn;
+                        let END = ey+"-"+em+"-"+ed+" "+eh+":"+emn; 
+
+                        
+                        const cour = {
+                            "id" : ID,
+                            "start" : START,
+                            "end" : END
+                        };
+
+                        let element = JSON.stringify(cour);
+                        
+                        console.log(cour);
+
+                        $.ajax({
+                            url :'drag_cour.php',
+                            dataType : 'json',
+                            type : 'post',
+                            data : {cour : JSON.stringify(cour)},
+                            success : function(reponse){
+                                console.log(reponse);
+                            }
+
+                        });
+
+                       
+                    }
+                    
+                });
+                
+                   
+                // On affiche le calendrier
+                calendar.render();
+                
+                
+                
+
+            </script>
 </html>
