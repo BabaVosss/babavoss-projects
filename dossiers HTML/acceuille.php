@@ -19,7 +19,7 @@
 
 <body>
     <!-- barre  de navigation -->
-    <div class="container-fluid">
+    <div class="container-fluid no-imp">
         <div class="row">
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
                     <a href="#" class="navbar-brand ">
@@ -64,7 +64,7 @@
             </div>
 
             <!--formulaire -->
-            <div class="col-2 bg-info">
+            <div class="col-2 bg-info no-imp">
                 <form id="form_index" method="post" action="registre_cour.php">
                     <div class="form-group my-3">
                         <h3>Programmer un cours </h3>
@@ -117,8 +117,10 @@
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary my-3">Enregistrer</button>
                     </div>
-                       
-                        
+                    
+                    <div class="form-group">
+                        <input type="button" id="imp" class="btn btn-dark " onclick="window.print()" value="Print" />
+                    </div>
                 </form>
             </div>
         </div>
@@ -128,11 +130,6 @@
            
     </nav>
     
-    <div class = "content">
-          
-         
-           
-    </div>
 </body>
 <footer style="margin : auto;">
     <?php include('author.php') ?>

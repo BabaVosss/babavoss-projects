@@ -24,7 +24,7 @@ if (isset($_POST['intitule']) && isset($_POST['id_classe']) && isset($_POST['id_
             'commentaire' => $_POST['commentaire']
         ));
         // Puis rediriger vers minichat.php comme ceci :
-        header('Location: index.php');
+        header('Location: acceuille.php');
       
 }
 else{

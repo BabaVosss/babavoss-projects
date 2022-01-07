@@ -3,90 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="./../../fullcalendar-source/lib/main.css">
-    
-
-    <link href="./../../bootstrap/bootstrap-5.1.3-dist/css/bootstrap.css" rel="stylesheet">
     
     
-    <script src="./../../fullcalendar-source/lib/main.js"></script>
+    <link rel="stylesheet" href="./../fullcalendar-source/lib/main.css">
+    
 
+    <link href="./../bootstrap/bootstrap-5.1.3-dist/css/bootstrap.css" rel="stylesheet">
+    
+    
+    <script src="./../fullcalendar-source/lib/main.js"></script>
+    <title>Page d'accueil</title>
+  
+ 
+</head> 
 
-    <title>classes</title>
-</head>
-<body> 
-     <!-- barre  de navigation -->
-    <div class="container-fluid">
-        <div class="row">
-                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-                    <a href="#" class="navbar-brand ">
-                        <img src="./../Images/school_administrator.png" height="111em" width="111em" alt="school_administrator">
-                        School-administrator
-                    </a>
+<body>
 
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-                        <span class="navbar-toggler-icon">
-                        </span>
-                    </button>
-
-                    <div id="navbarContent" class="collapse navbar-collapse mx-5">
-
-                        <ul class="navbar-nav">
-                            <li class="nav-item ">
-                                        <a class="nav-link " href="./../dossiers HTML/acceuille.php">Accueil</a></li>
-                            <li class="nav-item active">
-                                        <a class="nav-link active" href="./../dossiers HTML/classes.php">Classes</a></li>
-                            <li class="nav-item active">
-                                        <a class="nav-link" href="./../dossiers HTML/professeurs.php">Enseignants</a></li>
-                            <li class="nav-item active">
-                                        <a class="nav-link" href="./../dossiers HTML/salles_des_classes.php">Salles de classes</a></li>
-                            <li class="nav-item active">
-                                        <a class="nav-link" href="./../dossiers HTML/base_de_données.php">Base de données</a></li>
-                            <li class="nav-item active">
-                                        <a class="nav-link" href="index.php">Deconnexion</a></li>
-                        </ul>
-                    </div>
-                </nav> 
-        </div>
-    </div>
+    <!-- corps de la page -->
     <div class="container-fluid mt-2">
         <div class="row">
-
             <!-- position calendrier -->
-            <div class="col-10 container bg-light">
-                <div id="calendrier" style="height: 25cm;">
-
-
+            <div class="container-fluid bg-light">
+                <div id="calendrier" style="height: 25cm; position : static">
+                
                 </div>
             </div>
-
-            <!-- liste des classe -->
-            <div class="col-2 bg-info">
-                <fieldset style="color: white;" class="mx-2 mt-4 shadow bg-dark rounded"> 
-                    <legend class="mx-2 mb-5">liste des classes</legend>
-                    <ul class="list-group mb-3 mx-1">
-                        <?php include('liste_classe.php') ?>
-                    </ul>
-                </fieldset>
-            </div>
-
-        
-
         </div>
-
     </div>
-   
 
+    <nav>
+           
+    </nav>
+    
 </body>
-
 <footer style="margin : auto;">
     <?php include('author.php') ?>
 </footer>
 
 
+
 <?php  // scripte permettant d'instantier le caledrirer _____________________________ ?>
-<script src="./../../bootstrap/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+
+<?php //document.querySelector(".classe").addEventListener("change",function (){
+     //classe = "./cours_"+this.value+".php";
+    // alert(classe);
+                //});
+?>
+    <script src="./../dossier javascript/impression.js"></script>
+    <script src="./../bootstrap/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <script src="./jquery-3.5.1.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   
@@ -177,5 +141,4 @@
                     
 
     </script>
-                
 </html>
